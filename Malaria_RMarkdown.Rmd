@@ -43,7 +43,7 @@ names(malaria_inc)[4] <- 'INCIDENCE_PER_1K_AT_RISK'
 
 ```{r, include=TRUE}
 #this chunk is to check how data is being arranged in the data sets 
-  #filter out rows with CODE = NA since agg entities does not have a CODE associated with them  
+  #filter out rows with CODE = NA since agg entities do not have a CODE associated with them  
 macro_grps_regions <- malaria_deaths %>% filter(is.na(CODE))
 
 #there seems to be 2 main categories for macro_grps: regional and SDI level. We will categorize the macro_grps to ensure that we compare within similar categories to ensure our analysis are accurate (minimize effect of confounding variables)
@@ -92,7 +92,7 @@ A quick look at the data sets tells us a few key features of the data:
 2. There are macro level entity grouping in the data sets (eg. "High SDI", "Oceanic"). We will categorize these macro groupings into 2 major higher level groupings: **Regional** and **SDI (Social Development Index) Level**. This will enable us to make appropriate comparative analysis within each MECE (Mutually Exclusive, Collective Exhaustive) grouping.
 3. The top 5 regions with highest malaria death rates sees average malaria death rates significantly higher than the global average (~10), hence we focus on presenting these top 5 regions' performance, as that is where the implemented policies have the potential to make the greatest impact.
 4. *'malaria_deaths'* gives the death rate as number of deaths per 100,000 individuals, while *'malaria_deaths_age'* gives the absolute number of deaths per age group. We will be standardizing the units for death rate to deaths per 100,000 individuals, so that we will be able to easily do a deep dive analysis from average death rate in entity > drill down into death rate for each age category.
-5. *'malaria_inc'* only gives the data in intervals of 5 years (and only starting from year 2000), compared to the other 2 data sets which gives deaths annually (starting from year 1990). As such, we will only be computing the overall infection mortality rate (see Section XX below) in 5-yearly intervals.
+5. *'malaria_inc'* only gives the data in intervals of 5 years (and only starting from year 2000), compared to the other 2 data sets which gives deaths annually (starting from year 1990). As such, we will only be computing the overall infection mortality rate (see Viz 3 below) in 5-yearly intervals.
 
 With these notes in mind, we will focus on creating visualizations to inform users on which regions sees the highest average rates of malaria deaths/incidences, as well as the associated proportion of deaths contributed by each age group.
 
@@ -231,8 +231,6 @@ Both cases are not ideal, assuming our end goal is to eliminate absolute deaths 
 
 Lastly, there is also a possibility to use the final processed data sets for interactive visualizations in programs such as Tableau or Power BI. A big advantage of using such dashboards would be that the final visualization can be created with multiple tune-able parameters which each individual will be able to dynamically set, allowing for in-depth analysis according to their needs. A sample dashboard has also been implemented in Tableau at the following links as proof-of-concept, which can be accessed from the following link:
 
-[Malaria Deaths & Incidences Data Story](http://example.com)
+[Malaria Incidence Dashboard](https://public.tableau.com/views/Malaria_Case_Study_Dashboard/MalariaIncidenceBreakdown?:language=en-US&publish=yes&:display_count=n&:origin=viz_share_link)
 
-
-write.csv(malaria_deaths_combined_regional, "C:/Users/lowzh/Desktop/malaria_deaths_combined_regional.csv", row.names=FALSE)
-write.csv(malaria_inc_combined_country_lvl, "C:/Users/lowzh/Desktop/malaria_inc_combined_country_lvl.csv", row.names=FALSE)
+[Malaria Deaths Dashboard](https://public.tableau.com/views/Malaria_Case_Study_Dashboard/MalariaDeathsBreakdown?:language=en-US&publish=yes&:display_count=n&:origin=viz_share_link)
