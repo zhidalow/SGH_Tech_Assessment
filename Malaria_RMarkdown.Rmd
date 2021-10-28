@@ -137,7 +137,7 @@ The data sets have been cleaned and prepared, and a quick summary of the variabl
 
 * *malaria_deaths_combined_regional* gives the avg death rates as well as the death rate breakdown by age groups
 * *malaria_inc_combined_country_lvl* gives the malaria incidence per 100K at risk population, as well as the mortality rate if infected (in %) under MORTALITY_IF_INFECTED_pct column
-* Variables will be used so that we can dynamically change the time range / number of regions we would like to pull for Time range will be controlled by the **no_of_years_regional** variable while **top_y_regions_regional** will control the top number of regions we would like to pull for for viz 1
+* Variables will be used so that we can dynamically change the time range / number of regions we would like to pull for. Time range will be controlled by the **no_of_years_regional** variable while **top_y_regions_regional** will control the top number of regions we would like to pull for for viz 1
 * We set up similar variables for viz 3 (incidence rate): **top_y_countries**. 
 
 
@@ -229,7 +229,7 @@ Both cases are not ideal, assuming our end goal is to eliminate absolute deaths 
 
 ## Final Words
 
-Lastly, there is also a possibility to use the final processed data sets for interactive visualizations in programs such as Tableau or Power BI. A big advantage of using such dashboards would be that the final visualization can be created with multiple tune-able parameters which each individual will be able to dynamically set, allowing for in-depth analysis according to their needs. A sample dashboard has also been implemented in Tableau at the following links as proof-of-concept, which can be accessed from the following link:
+Lastly, there is also a possibility to use the final processed data sets for interactive visualizations in programs such as Tableau or Power BI. A big advantage of using such dashboards would be that the final visualization can be created with multiple tune-able parameters which each individual will be able to dynamically set, allowing for in-depth analysis according to their needs. A sample dashboard has also been implemented in Tableau at the following links as proof-of-concept:
 
 [Malaria Incidence Dashboard](https://public.tableau.com/views/Malaria_Case_Study_Dashboard/MalariaIncidenceBreakdown?:language=en-US&publish=yes&:display_count=n&:origin=viz_share_link)
 
